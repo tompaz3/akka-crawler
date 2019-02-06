@@ -100,11 +100,7 @@
         <version>${exec.plugin.version}</version>
         <configuration>
           <executable>java</executable>
-          <arguments>
-            <argument>-classpath</argument>
-            <classpath/>
-            <argument>com.tp.samples.akkacrawler.AkkaCrawlerApp</argument>
-          </arguments>
+          <mainClass>com.tp.samples.akkacrawler.AkkaCrawlerApp</mainClass>
         </configuration>
       </plugin>
       <plugin>

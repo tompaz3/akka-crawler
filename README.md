@@ -12,12 +12,12 @@ To run an application, use Maven build manager (or using your favourite IDE).
 
 Running the following command builds and executes an application:
 ```cmd
-mvn clean compile exec:exec
+mvn clean compile exec:java
 ```
 
 If you want to run tests as well, use the following command:
 ```cmd
-mvn clean test exec:exec
+mvn clean test exec:java
 ```
 
 Application's run sample result should look like this:
@@ -34,3 +34,12 @@ AkkaCrawlerApp Retrieved result:
 	News(title=Gol miesiąca – podsumowanie, published=2019-02-05T22:30, permalink=http://www.realmadryt.pl/index.php?co=aktualnosci&id=86850&kom=ok)
 	News(title=Solari zabierze do Barcelony 21 zawodników, published=2019-02-05T21:39, permalink=http://www.realmadryt.pl/index.php?co=aktualnosci&id=86869&kom=ok)
 ```
+
+Application reads 10 latest news by default. 
+To provide your own arguments, simply add `-Dexec.args="20"` to the maven command 
+(here, 20 news are set to be read).
+
+---
+
+You can skip `clean`, `compile` or `test` Maven goals in all the above commands if you have already built
+an application. To simply run a built app, call `mvn exec:java` instead.
