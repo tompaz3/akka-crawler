@@ -17,7 +17,7 @@ public class RmSiteNewsReader {
    *
    * @return site's URL.
    */
-  public String getSiteUrl() {
+  String getSiteUrl() {
     return SITE_URL;
   }
 
@@ -31,15 +31,15 @@ public class RmSiteNewsReader {
    * (index of the news on the returned page).
    */
   @SneakyThrows
-  public Option<RmPage> findPage(int index, long timeoutMillis) {
+  Option<RmPage> findPage(int index, long timeoutMillis) {
     if (index < 0) {
       return Option.empty();
     }
     return findPage(index, 1, timeoutMillis, System.currentTimeMillis());
   }
 
-  private Option<RmPage> findPage(final int index, final int page, final long timeoutMillis,
-      final long startTime) {
+  private Option<RmPage> findPage(final int index, final int page,
+      final long timeoutMillis, final long startTime) {
     if (System.currentTimeMillis() - startTime >= timeoutMillis) {
       return Option.empty();
     }

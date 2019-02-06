@@ -19,10 +19,10 @@ import scala.concurrent.duration.FiniteDuration;
 
 class RmNewsActorTest {
 
-  static ActorSystem system;
-  static RmSiteNewsReader newsReader;
-  static RmNewsDateParser dateParser;
-  static FiniteDuration timeout;
+  private static ActorSystem system;
+  private static RmSiteNewsReader newsReader;
+  private static RmNewsDateParser dateParser;
+  private static FiniteDuration timeout;
 
 
   @BeforeAll
@@ -30,7 +30,7 @@ class RmNewsActorTest {
     system = ActorSystem.create("rmSingleNewsActorTestSystem");
     newsReader = new RmSiteNewsReader();
     dateParser = new RmNewsDateParser();
-    timeout = Duration.create(1L, TimeUnit.SECONDS);
+    timeout = Duration.create(10L, TimeUnit.SECONDS);
   }
 
   @AfterAll
