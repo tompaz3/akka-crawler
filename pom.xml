@@ -13,7 +13,7 @@
     <junit.bom.version>5.3.2</junit.bom.version>
     <assertj.version>3.11.1</assertj.version>
     <lombok.version>1.18.4</lombok.version>
-    <jsoup.version>1.11.3</jsoup.version>
+    <jsoup.version>1.14.2</jsoup.version>
 
     <compiler.plugin.version>3.8.0</compiler.plugin.version>
     <surefire.plugin.version>3.0.0-M3</surefire.plugin.version>
